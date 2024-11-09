@@ -19,7 +19,7 @@
             width: 100%;
             height: 100vh;
             overflow: hidden;
-            background: linear-gradient(to top, #2593c9 50%, #c4cfd6 100%); /* Màu nước xanh da trời nhẹ nhàng */
+            background: linear-gradient(to top, #0592d8 50%, #b6bcc0 100%); /* Màu nước xanh da trời nhẹ nhàng */
         }
 
         /* Hiệu ứng gợn sóng */
@@ -32,11 +32,11 @@
          .shark {
             position: absolute;
             width: 1500px; /* Kích thước cá */
-            height: 150px; 
+            height: 100px; 
             background-size: contain;
             background-repeat: no-repeat;
             animation: sharkSwim linear infinite;
-            animation-duration: 20s; /* Thời gian bơi */
+            animation-duration: 16s; /* Thời gian bơi */
             
         }
         @keyframes sharkSwim {
@@ -60,16 +60,17 @@
         }
 
         @keyframes fishSwim {
-            0% { left: -100px; transform: scaleX(1); }
-            50% { left: calc(100vw - 100px); transform: scaleX(1); }
-            51% { transform: scaleX(-1); }
-            100% { left: -100px; transform: scaleX(-1); }
+            0% { left: -100px; top: calc(20% + (random() * 60%)); transform: scaleX(1); }
+            50% { left: calc(100vw - 80px); top: calc(20% + (random() * 60%)); transform: scaleX(1); }
+            51% { transform: scaleX(-1); } /* Quay đầu */
+            100% { left: -100px; top: calc(20% + (random() * 60%)); transform: scaleX(-1); }
         }
+
         /* Rùa */
         .turtle {
             position: absolute;
-            width: 150px; /* Kích thước rùa */
-            height: 130px;
+            width: 100px; /* Kích thước rùa */
+            height: 70px;
             background-size: contain;
             background-repeat: no-repeat;
             animation: turtleSwim linear infinite;
@@ -102,7 +103,7 @@
         }
 
         .jellyfish2 {
-            background-image: url(/hocacanh/sua.hbvha-removebg-preview.png); /* Hình ảnh sứa 2 */
+            background-image: url(/suaa.png); /* Hình ảnh sứa 2 */
             left: 75%; /* Vị trí bên trái */
             top: 40%; /* Vị trí phía trên */
             animation-duration: 5s;
@@ -118,8 +119,8 @@
         /* Sao biển */
         .starfish {
             position: absolute;
-            width: 50px; /* Kích thước sao biển */
-            height: 50px;
+            width: 40px; /* Kích thước sao biển */
+            height: 40px;
             background-size: contain;
             background-repeat: no-repeat;
             bottom: 5%;
@@ -176,8 +177,8 @@
        
           
         /* Vị trí từng cục đá */
-        .coral7 { left: 37%; background-image: url(/hocacanh/cục\ đá.png) }
-        .coral8 { left: 71%; background-image: url(/hocacanh/cục\ đá.png) }
+        .coral7 { left: 38%; background-image: url(/cuc\ đá.png) }
+        .coral8 { left: 70%; background-image: url(/cuc\ đá.png) }
 
         /* Sao biển */
         .starfish {
@@ -190,24 +191,24 @@
             left: calc(5% + (random() * 90%));
         }
         .starfish1 {
-            background-image: url(/hocacanh/saobien.hdac-removebg-preview.png); /* Hình ảnh sao biển 1 */
+            background-image: url(/saobien.hdac-removebg-preview.png); /* Hình ảnh sao biển 1 */
             left: 34%; /* Vị trí bên trái */
             bottom: 10%; /* Vị trí phía dưới */
         }
 
         .starfish2 {
-            background-image: url(/hocacanh/saobien.hdac-removebg-preview.png); /* Hình ảnh sao biển 2 */
+            background-image: url(/saobien.hdac-removebg-preview.png); /* Hình ảnh sao biển 2 */
             left: 76%; /* Vị trí bên trái */
             bottom: 20%; /* Vị trí phía dưới */
         }
 
         .starfish3 {
-            background-image: url(/hocacanh/saobien.hdac-removebg-preview.png); /* Hình ảnh sao biển 3 */
+            background-image: url(/saobien.hdac-removebg-preview.png); /* Hình ảnh sao biển 3 */
             left: 16%; /* Vị trí bên trái */
             bottom: 16%; /* Vị trí phía dưới */
         }
         .starfish4 {
-            background-image: url(/hocacanh/saobien.hdac-removebg-preview.png); /* Hình ảnh sao biển 3 */
+            background-image: url(/saobien.hdac-removebg-preview.png); /* Hình ảnh sao biển 3 */
             left: 66%; /* Vị trí bên trái */
             bottom: 30%; /* Vị trí phía dưới */
         }
@@ -222,14 +223,14 @@
         }
 
         .crab1 {
-            background-image: url(/hocacanh/cuabien.png); /* Đường dẫn hình cua 1 */
+            background-image: url(/cuabien.png); /* Đường dẫn hình cua 1 */
             bottom: 10%; /* Vị trí cua */
             left: 5%;
             animation-duration: 4s; /* Tăng tốc độ */
         }
 
         .crab2 {
-            background-image: url(/hocacanh/cuabien.png); /* Đường dẫn hình cua 2 */
+            background-image: url(/cuabien.png); /* Đường dẫn hình cua 2 */
             bottom: 15%; /* Vị trí cua */
             left: 75%;
             animation-duration: 5s; /* Tăng tốc độ */
@@ -252,17 +253,18 @@
 <body>
     <div class="aquarium">
         <!-- Các loại cá -->
-        <div class="fish" style="background-image: url(/hocacanh/cá\ xanh.png); top: 30%; animation-delay: 0s;"></div>
-        <div class="fish" style="background-image: url(/hocacanh/cá\ hề.png); top: 50%; animation-delay: 1s;"></div>
+        <div class="fish" style="background-image: url(/hocacanh/shark.png); top: 30%; animation-delay: 0s;"></div>
+        <div class="fish" style="background-image: url(/hocacanh/cá\ hề\ .png); top: 50%; animation-delay: 1s;"></div>
         <div class="fish" style="background-image: url(/hocacanh/cabaymau.png); top: 40%; animation-delay: 2s;"></div>
-        <div class="fish" style="background-image: url(/hocacanh/cá\ hề.png); top: 60%; animation-delay: 3s;"></div>
+        <div class="fish" style="background-image: url(/hocacanh/cá\ hề\ .png); top: 60%; animation-delay: 3s;"></div>
         <div class="fish" style="background-image: url(/hocacanh/cabaymau.png); top: 20%; animation-delay: 4s;"></div>
         <div class="fish" style="background-image: url(/hocacanh/hocacanh/cá\ hề\ .png); top: 35%; animation-delay: 5s;"></div>
         <div class="fish" style="background-image: url(/hocacanh/cabaymau.png); top: 25%; animation-delay: 7s;"></div>
         <div class="fish" style="background-image: url(/hocacanh/cá\ xanh.png); top: 55%; animation-delay: 8s;"></div>
         
         <!-- Rùa -->
-        <div class="turtle" style="background-image: url(/hocacanh/ruaa.png); top: 70%; animation-delay: 0s;"></div>
+        <div class="turtle" style="background-image: url(/hocacanh/turtle.png); top: 70%; animation-delay: 0s;"></div>
+        <div class="turtle" style="background-image: url(/hocacanh/ruaa.png); top: -70%; animation-delay: 1s;"></div>
         
         <!-- Sứa -->
         <div class="jellyfish jellyfish1"></div>
@@ -300,7 +302,8 @@
         <div class="crab crab2"></div>
         <div class="crab crab3"></div>
         <!-- Shark -->
-        <div class="shark" style="background-image: url(/hocacanh/mega.png); top: 30%; animation-delay: 0s;"></div>
+        <div class="shark" style="background-image: url(/hocacanh/mega.png); top: 50%; animation-delay: 0s;"></div>
+        <div class="fish" style="background-image: url(/hocacanh/shark.png); top: 30%; animation-delay: 0s;"></div>
          
        
     </div>
